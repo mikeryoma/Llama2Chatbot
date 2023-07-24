@@ -1,13 +1,11 @@
-# 📦 Llama 2 Chatbot
+# 📦 Llama 2 Chatbot (Customized by Mikeryoma)
 ```
-⬆️ (Replace above with your app's name)
 ```
-
-Llama 2 chatbot with Meta LLM Llama-2
+Llama 2 chatbot with Meta LLM Llama-2 (Customized by Mikeryoma)
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://starter-kit.streamlitapp.com/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mikeryoma-llama2chatbot.streamlit.app/)
 
 ## Section Heading
 
