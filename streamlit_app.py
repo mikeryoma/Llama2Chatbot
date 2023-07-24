@@ -6,13 +6,13 @@ import keyboard
 import psutil
 
 # App title
-st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
+st.set_page_config(page_title="🦙Llama 2 Chatbot🤖 by mikeryoma")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('🦙💬 Llama 2 Chatbot')
+    st.title('🦙Llama 2 Chatbot🤖 by mikeryoma')
     if 'REPLICATE_API_TOKEN' in st.secrets:
-        st.success('API key already provided!', icon='✅')
+        st.success('API key authenticated', icon='🔑')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
     else:
         replicate_api = st.text_input('Enter Replicate API token:', type='password')
@@ -20,13 +20,14 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
-    st.markdown('📖 Learn how to build this app in this [blog](#link-to-blog)!')
+    #st.markdown('📖 Learn how to build this app in this [blog](#link-to-blog)!')
+
 os.environ['REPLICATE_API_TOKEN'] = replicate_api
 
 exit_app = st.sidebar.button("Shut Down")
 if exit_app:
     # Give a bit of delay for user experience
-    time.sleep(5)
+    time.sleep(1)
     # Close streamlit browser tab
     keyboard.press_and_release('ctrl+w')
     # Terminate streamlit python process
