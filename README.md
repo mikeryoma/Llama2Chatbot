@@ -1,9 +1,9 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 Llama 2 Chatbot
 ```
 ⬆️ (Replace above with your app's name)
 ```
 
-Description of the app ...
+Llama 2 chatbot with Meta LLM Llama-2
 
 ## Demo App
 
