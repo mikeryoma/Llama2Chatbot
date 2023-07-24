@@ -1,6 +1,9 @@
 import streamlit as st
 import replicate
 import os
+import time
+import keyboard
+import psutil
 
 # App title
 st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
@@ -19,6 +22,17 @@ with st.sidebar:
             st.success('Proceed to entering your prompt message!', icon='👉')
     st.markdown('📖 Learn how to build this app in this [blog](#link-to-blog)!')
 os.environ['REPLICATE_API_TOKEN'] = replicate_api
+
+exit_app = st.sidebar.button("Shut Down")
+if exit_app:
+    # Give a bit of delay for user experience
+    time.sleep(5)
+    # Close streamlit browser tab
+    keyboard.press_and_release('ctrl+w')
+    # Terminate streamlit python process
+    pid = os.getpid()
+    p = psutil.Process(pid)
+    p.terminate()
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
